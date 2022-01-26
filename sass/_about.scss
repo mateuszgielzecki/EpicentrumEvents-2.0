@@ -1,0 +1,84 @@
+.section--about {
+  grid-column: full-start / full-end;
+  grid-row: 3 / 4;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5rem;
+}
+
+.about__photo {
+  position: relative;
+
+//   .about__photo-border {
+    //     width: 60rem;
+    //     height: 60rem;
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-25%, -50%);
+//     border-radius: 50%;
+//     overflow: hidden;
+//     box-shadow: $shadow-dark;
+
+//     .about__photo-img {
+//       height: 100%;
+//       object-fit: cover;
+//     }
+//   }
+}
+// .about__photo::before {
+//   display: block;
+//   content: "";
+//   height: 100%;
+//   width: 65%;
+//   border: 3.5rem solid $color-secondary-dark;
+//   margin: 0 auto;
+// }
+
+.about__text {
+  padding: 5rem;
+  color: $color-primary-dark;
+  margin-right: 25%;
+  margin-left: 5%;
+
+  .heading-tertiary {
+    font-size: 5rem;
+    font-weight: 300;
+  }
+
+  .paragraph {
+    font-size: 2rem;
+    color: #999;
+    margin-bottom: 2rem;
+  }
+
+  .about__socials {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 2rem;
+    border-top: 2px solid #ddd;
+
+    .icon {
+      display: inline-block;
+      width: 6rem;
+      height: 6rem;
+      margin-left: 3rem;
+      cursor: pointer;
+      animation: iconBreath 1s infinite linear both;
+    }
+    .icon-instagram {
+      fill: $color-icon-instagram;
+    }
+    .icon-facebook {
+      fill: $color-icon-facebook;
+    }
+    .icon-youtube {
+      fill: $color-icon-youtube;
+    }
+    .icon-network {
+      fill: $color-icon-network;
+    }
+  }
+}

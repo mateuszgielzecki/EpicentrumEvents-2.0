@@ -1,4 +1,53 @@
+//  COLORS VARIABLES
+$color-white: #fff;
+
+$color-primary-dark: #1b1f20;
+$color-secondary-dark: #5b289f;
+$color-secondary-light: #944df1;
+$color-tertiary-dark: #dd2522;
+
+$color-icon-facebook: #0e8ef1;
+$color-icon-youtube: #ff0000;
+$color-icon-instagram: #cc2366;
+$color-icon-network: #2fc237;
+
+$shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+$shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+
+////////////////////////////////////////////////////
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px
+}
+
 body {
- 
-    height: 100vh;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6;
+  height: 200vh; //do usuniecia
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 10vh 90vh 1fr 1fr;
+  grid-template-columns:
+    [full-start] minmax(6rem, 1fr) [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 14rem) [col-end]
+    )
+    [center-end] minmax(6rem, 1fr) [full-end];
+}
+
+.section {
+  // padding: 5rem;
 }
