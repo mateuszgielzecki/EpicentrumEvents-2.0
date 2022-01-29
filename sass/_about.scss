@@ -1,56 +1,92 @@
-.section--about {
+.about {
   grid-column: full-start / full-end;
   grid-row: 3 / 4;
+  
 
+.about-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 5rem;
+  min-height: 80vh;
 }
 
-.about__photo {
+.about-container--first { 
+  // grid-auto-flow: dense;
+
+}
+.about-container--second { 
+  grid-auto-flow: dense;
+  direction: rtl;
+  text-align: left;
+}
+
+
+///////////////////////////////////////////////
+// PHOTO
+
+.about-photo {
   position: relative;
+  background: rgb(39,43,43);
+  background: radial-gradient(circle, rgba(39,43,43,1) 40%, rgba(27,31,32,1) 89%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 
-//   .about__photo-border {
-    //     width: 60rem;
-    //     height: 60rem;
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-25%, -50%);
-//     border-radius: 50%;
-//     overflow: hidden;
-//     box-shadow: $shadow-dark;
+  &-img {
+    max-width: 750px;
+    z-index: 2;
+    object-fit: cover;
+    margin: auto;
 
-//     .about__photo-img {
-//       height: 100%;
-//       object-fit: cover;
-//     }
-//   }
+    box-shadow: rgba(255, 255, 255, 0.089) 0px 3px 8px;
+
+
+  }
+
+  &-img::before {
+    display: block;
+  content: '';
+  background-color: #fff;
+  width: 110%;
+  height: 110%;
+
+position: absolute;
+  }
+  
+
 }
-// .about__photo::before {
+
+// .about-photo::after {
 //   display: block;
-//   content: "";
-//   height: 100%;
-//   width: 65%;
-//   border: 3.5rem solid $color-secondary-dark;
-//   margin: 0 auto;
+//   content: '';
+//   background-color: #fff;
+//   width: 80%;
+//   height: 80%;
+
+// position: absolute;
 // }
 
-.about__text {
+///////////////////////////////////////////////
+// TEXT
+
+.about-text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   padding: 5rem;
   color: $color-primary-dark;
-  margin-right: 25%;
-  margin-left: 5%;
+  width: 100%;
+  background-color: $color-white-grey;
 
   .heading-tertiary {
-    font-size: 5rem;
+    font-size: 7rem;
     font-weight: 300;
+    letter-spacing: 4px;
   }
 
   .paragraph {
-    font-size: 2rem;
-    color: #999;
-    margin-bottom: 2rem;
+    font-size: 2.5rem;  
+    color: $color-dark-grey;
   }
 
   .about__socials {
@@ -58,13 +94,13 @@
     justify-content: end;
     align-items: center;
     padding: 2rem;
-    border-top: 2px solid #ddd;
+    border-top: 2px solid $color-light-grey;
 
     .icon {
       display: inline-block;
       width: 6rem;
       height: 6rem;
-      margin-left: 3rem;
+      margin-left: 5rem;
       cursor: pointer;
       animation: iconBreath 1s infinite linear both;
     }
@@ -81,4 +117,6 @@
       fill: $color-icon-network;
     }
   }
+}
+
 }

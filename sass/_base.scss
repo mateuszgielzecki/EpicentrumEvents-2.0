@@ -1,7 +1,13 @@
 //  COLORS VARIABLES
 $color-white: #fff;
+$color-black: #000;
+$color-white-grey: #f8f8f8f8;
+
+$color-dark-grey: #999;
+$color-light-grey: #ddd;
 
 $color-primary-dark: #1b1f20;
+$color-primary-dark-transparent: #1b1f20a6;
 $color-secondary-dark: #5b289f;
 $color-secondary-light: #944df1;
 $color-tertiary-dark: #dd2522;
@@ -39,7 +45,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 10vh 90vh 1fr 1fr;
+  grid-template-rows: 10vh 90vh min-content min-content min-content;
   grid-template-columns:
     [full-start] minmax(6rem, 1fr) [center-start] repeat(
       8,
